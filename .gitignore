@@ -1,0 +1,131 @@
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+out/
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# =========================
+# ASP.NET / .NET
+# =========================
+*.dbmdl
+*.jfm
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.publishsettings
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# IIS Express
+/.vs
+/iisexpress
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Publish output
+publish/
+app.publish/
+
+# =========================
+# React / Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package managers
+.pnpm-store/
+.yarn/
+.yarn-cache/
+.yarnrc.yml
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# React build output
+dist/
+coverage/
+.next/
+.cache/
+
+# Vite
+vite.svg
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# JetBrains
+# =========================
+.idea/
+
+# =========================
+# Optional secrets/config
+# =========================
+secrets.json
+appsettings.Development.json
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Azure
+# =========================
+.azure/
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.tmp
+*.temp
