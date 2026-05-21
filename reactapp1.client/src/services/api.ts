@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { AxiosInstance } from 'axios';
 import type { User, Screening, Cinema, Booking } from '../types/index';
 
-const API_BASE_URL = 'http://localhost:5145/api';
+const API_BASE_URL = '/api';
 
 class ApiService {
   private api: AxiosInstance;
