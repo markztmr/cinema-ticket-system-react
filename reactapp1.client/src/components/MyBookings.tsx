@@ -8,7 +8,6 @@ export const MyBookings: React.FC = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
   const [bookings, setBookings] = useState<Booking[]>([]);
-  const [loadingBookings, setLoadingBookings] = useState(true);
   const [error, setError] = useState('');
   const [cancelingId, setCancelingId] = useState<number | null>(null);
 
@@ -28,8 +27,6 @@ export const MyBookings: React.FC = () => {
         setBookings(data);
       } catch (err) {
         setError('Failed to load bookings');
-      } finally {
-        setLoadingBookings(false);
       }
     };
 

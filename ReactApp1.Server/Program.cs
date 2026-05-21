@@ -4,15 +4,12 @@ using BCrypt.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddHttpContextAccessor();
 
-// Add Distributed Cache
 builder.Services.AddDistributedMemoryCache();
 
-// Add Session
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromHours(24);
@@ -26,7 +23,6 @@ builder.Services.AddSession(options =>
     options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
 });
 
-// Add CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -38,7 +34,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     var connectionString = "Server=localhost;Port=3306;Database=CinemaDb;Uid=root;Pwd=;";
@@ -47,7 +42,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-// Initialize database
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -81,7 +75,6 @@ using (var scope = app.Services.CreateScope())
 app.UseDefaultFiles();
 app.MapStaticAssets();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import type { AxiosInstance } from 'axios';
-import type { User, Screening, Reservation, Cinema, Booking } from '../types/index';
+import type { User, Screening, Cinema, Booking } from '../types/index';
 
 const API_BASE_URL = 'http://localhost:5145/api';
 
@@ -14,7 +14,6 @@ class ApiService {
     });
   }
 
-  // Auth endpoints
   async register(firstName: string, lastName: string, phoneNumber: string, password: string): Promise<User> {
     const response = await this.api.post<User>('/auth/register', {
       firstName,
@@ -67,7 +66,6 @@ class ApiService {
     return response.data;
   }
 
-  // Cinema endpoints
   async getCinemas(): Promise<Cinema[]> {
     const response = await this.api.get<Cinema[]>('/cinemas');
     return response.data;
@@ -78,7 +76,6 @@ class ApiService {
     return response.data;
   }
 
-  // Screening endpoints
   async getScreenings(): Promise<Screening[]> {
     const response = await this.api.get<Screening[]>('/screenings');
     return response.data;
@@ -102,7 +99,6 @@ class ApiService {
     await this.api.delete(`/screenings/${id}`);
   }
 
-  // Reservation endpoints
   async toggleReservation(screeningId: number, row: number, seat: number): Promise<void> {
     await this.api.post('/reservations/toggle', {
       screeningId,

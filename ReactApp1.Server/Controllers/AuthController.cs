@@ -169,10 +169,6 @@ namespace ReactApp1.Server.Controllers
                 return Unauthorized();
             }
 
-            // Use AsNoTracking so EF does NOT snapshot the current RowVersion.
-            // We will attach the entity manually and set OriginalValue to the
-            // client-supplied RowVersion — this is what drives the WHERE clause
-            // in the UPDATE statement and makes optimistic concurrency work.
             var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
             if (user == null)
             {
@@ -193,8 +189,6 @@ namespace ReactApp1.Server.Controllers
                 user.Password = HashPassword(request.Password);
             }
 
-            // Attach the entity and explicitly set the OriginalValue for RowVersion.
-            // EF will emit: UPDATE ... WHERE Id = @id AND RowVersion = @originalRowVersion
             var entry = _db.Users.Attach(user);
             entry.State = EntityState.Modified;
 
@@ -209,8 +203,6 @@ namespace ReactApp1.Server.Controllers
             }
             catch (DbUpdateConcurrencyException ex)
             {
-                // Reload the current database values so the client can see
-                // what changed and display a meaningful conflict message.
                 await ex.Entries.Single().ReloadAsync();
                 var currentUser = (ApplicationUser)ex.Entries.Single().Entity;
 

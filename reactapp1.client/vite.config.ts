@@ -52,7 +52,6 @@ export default defineConfig({
                 secure: false
             }
         },
-        port: parseInt(env.DEV_SERVER_PORT || '5173'),
-        https: false
+        port: parseInt(env.DEV_SERVER_PORT || '5173')
     }
 })
