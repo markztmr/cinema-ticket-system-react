@@ -1,4 +1,4 @@
-namespace ReactApp1.Server.DTOs
+namespace ReactMovie.Server.DTOs
 {
     public class CinemaResponse
     {

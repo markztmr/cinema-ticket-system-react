@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ReactApp1.Server.Models
+namespace ReactMovie.Server.Models
 {
     public class ApplicationUser
     {

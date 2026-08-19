@@ -1,0 +1,6 @@
+@ReactMovie.Server_HostAddress = http://localhost:5145
+
+GET {{ReactMovie.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

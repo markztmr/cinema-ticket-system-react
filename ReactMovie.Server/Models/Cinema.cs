@@ -1,4 +1,4 @@
-namespace ReactApp1.Server.Models
+namespace ReactMovie.Server.Models
 {
     public class Cinema
     {

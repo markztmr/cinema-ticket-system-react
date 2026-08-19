@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="reactapp1.client/ReactMovie.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ReactApp1.Server/ReactMovie.Server.csproj" />
+</Solution>

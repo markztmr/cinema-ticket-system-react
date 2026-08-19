@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ReactApp1.Server.Data;
+using ReactMovie.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

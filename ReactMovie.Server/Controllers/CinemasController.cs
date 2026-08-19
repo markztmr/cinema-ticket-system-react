@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ReactApp1.Server.Data;
-using ReactApp1.Server.DTOs;
+using ReactMovie.Server.Data;
+using ReactMovie.Server.DTOs;
 
-namespace ReactApp1.Server.Controllers
+namespace ReactMovie.Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ReactApp1.Server.Models;
+using ReactMovie.Server.Models;
 
-namespace ReactApp1.Server.Data
+namespace ReactMovie.Server.Data
 {
     public class ApplicationDbContext : DbContext
     {

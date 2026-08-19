@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ReactApp1.Server.Models
+namespace ReactMovie.Server.Models
 {
     public class Screening
     {
