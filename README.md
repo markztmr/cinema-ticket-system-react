@@ -47,6 +47,10 @@ Seat reservations are protected against concurrent booking attempts. The databas
 
 ![Admin panel](screenshots/admin_panel.png)
 
+### Concurrency Conflict
+
+![Concurrency conflict](screenshots/concurrency_conflict.png)
+
 ## Tech Stack
 
 ### Backend
